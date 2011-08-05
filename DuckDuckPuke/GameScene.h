@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "cocos2d.h"
 
-static BOOL L0AccelerationIsShaking(UIAcceleration* last, UIAcceleration* current, double threshold) {
+static BOOL isShakingCheck(UIAcceleration* last, UIAcceleration* current, double threshold) {
     double
     deltaX = fabs(last.x - current.x),
     deltaY = fabs(last.y - current.y),
@@ -23,12 +22,15 @@ static BOOL L0AccelerationIsShaking(UIAcceleration* last, UIAcceleration* curren
 
 
 @interface GameScene : CCLayer {
-    BOOL histeresisExcited;
+    BOOL isShaking;
     UIAcceleration* lastAcceleration;
     CCSprite* player;
 }
 @property(retain) UIAcceleration* lastAcceleration;
 
 +(id) scene;
+
+-(void) createDuck;
+-(void) checkForShaking:(UIAcceleration *)acceleration;
 
 @end
