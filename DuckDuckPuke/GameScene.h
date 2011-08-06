@@ -8,23 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-static BOOL isShakingCheck(UIAcceleration* last, UIAcceleration* current, double threshold) {
-    double
-    deltaX = fabs(last.x - current.x),
-    deltaY = fabs(last.y - current.y),
-    deltaZ = fabs(last.z - current.z);
-    
-    return
-    (deltaX > threshold && deltaY > threshold) ||
-    (deltaX > threshold && deltaZ > threshold) ||
-    (deltaY > threshold && deltaZ > threshold);
-}
-
-
 @interface GameScene : CCLayer {
     BOOL isShaking;
     UIAcceleration* lastAcceleration;
     CCSprite* player;
+    int shakenLevel;
 }
 @property(retain) UIAcceleration* lastAcceleration;
 
@@ -32,5 +20,6 @@ static BOOL isShakingCheck(UIAcceleration* last, UIAcceleration* current, double
 
 -(void) createDuck;
 -(void) checkForShaking:(UIAcceleration *)acceleration;
+-(BOOL) isShakingCheck:(UIAcceleration *)current andThreshold:(double)threshold;
 
 @end
