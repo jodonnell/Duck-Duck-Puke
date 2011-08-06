@@ -8,6 +8,7 @@
 
 #import "GameScene.h"
 #import "CCAnimationHelper.h"
+#import "Duck.h"
 
 @implementation GameScene
 
@@ -36,22 +37,8 @@
 
 -(void) createDuck
 {
-    CCSpriteFrameCache* frameCache = [CCSpriteFrameCache sharedSpriteFrameCache];
-    [frameCache addSpriteFramesWithFile:@"ducks.plist"];
-
-    player = [CCSprite spriteWithSpriteFrameName:@"daffystanding0.png"];
-
-    CCAnimation* anim = [CCAnimation animationWithFrame:@"daffystanding" frameCount:2 delay:0.08f];
-    anim.delay = 0.08;
-    CCAnimate* animate = [CCAnimate actionWithAnimation:anim];
-    CCRepeatForever* repeat = [CCRepeatForever actionWithAction:animate];
-    [player runAction:repeat];
-
+    player = [Duck duck];
     [self addChild:player z:0 tag:1];
-
-    CGSize screensize = [[CCDirector sharedDirector] winSize];
-    player.position = CGPointMake(screensize.width / 2, screensize.height / 2);
-
     //[self scheduleUpdate];
 }
 

@@ -10,6 +10,7 @@
 		3398689013ECDD7E00C2F7C3 /* CCAnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3398688F13ECDD7E00C2F7C3 /* CCAnimationHelper.m */; };
 		3398689C13EDA1B400C2F7C3 /* ducks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3398689A13EDA1B400C2F7C3 /* ducks.plist */; };
 		3398689D13EDA1B400C2F7C3 /* ducks.png in Resources */ = {isa = PBXBuildFile; fileRef = 3398689B13EDA1B400C2F7C3 /* ducks.png */; };
+		339868A013EDB8E000C2F7C3 /* Duck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3398689F13EDB8E000C2F7C3 /* Duck.m */; };
 		33FF0F8613EBB23E00F421DD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FF0F8513EBB23E00F421DD /* QuartzCore.framework */; };
 		33FF0F8813EBB23E00F421DD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FF0F8713EBB23E00F421DD /* OpenGLES.framework */; };
 		33FF0F8A13EBB23E00F421DD /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FF0F8913EBB23E00F421DD /* OpenAL.framework */; };
@@ -132,6 +133,8 @@
 		3398688F13ECDD7E00C2F7C3 /* CCAnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAnimationHelper.m; sourceTree = "<group>"; };
 		3398689A13EDA1B400C2F7C3 /* ducks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ducks.plist; sourceTree = "<group>"; };
 		3398689B13EDA1B400C2F7C3 /* ducks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ducks.png; sourceTree = "<group>"; };
+		3398689E13EDB8E000C2F7C3 /* Duck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Duck.h; sourceTree = "<group>"; };
+		3398689F13EDB8E000C2F7C3 /* Duck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Duck.m; sourceTree = "<group>"; };
 		33FF0F8113EBB23E00F421DD /* DuckDuckPuke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuckDuckPuke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FF0F8513EBB23E00F421DD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		33FF0F8713EBB23E00F421DD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -425,6 +428,8 @@
 			children = (
 				33FF10E713EBB24100F421DD /* AppDelegate.h */,
 				33FF10E813EBB24100F421DD /* AppDelegate.m */,
+				3398689E13EDB8E000C2F7C3 /* Duck.h */,
+				3398689F13EDB8E000C2F7C3 /* Duck.m */,
 				33FF10EA13EBB24100F421DD /* RootViewController.h */,
 				33FF10EB13EBB24100F421DD /* RootViewController.m */,
 				3398688E13ECDD7E00C2F7C3 /* CCAnimationHelper.h */,
@@ -936,6 +941,7 @@
 				33FF10EC13EBB24100F421DD /* RootViewController.m in Sources */,
 				33FF10FB13EBB2AE00F421DD /* GameScene.m in Sources */,
 				3398689013ECDD7E00C2F7C3 /* CCAnimationHelper.m in Sources */,
+				339868A013EDB8E000C2F7C3 /* Duck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
