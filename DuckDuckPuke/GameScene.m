@@ -66,9 +66,14 @@
 {
     if (!isShaking && [self isShakingCheck:acceleration andThreshold:0.7]) {
         isShaking = YES;
+        [player stopAllActions];
+
+//        CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"daffyupset"]];
+//        CCRepeatForever* repeat = [CCRepeatForever actionWithAction:animate];
+        //[player runAction:repeat];
     } else if (isShaking && ![self isShakingCheck:acceleration andThreshold:0.2]) {
         isShaking = NO;
-        [self removeChildByTag:1 cleanup:YES];
+        [player setDisplayFrameWithAnimationName:@"daffystanding" index:0];
     }
 }
 

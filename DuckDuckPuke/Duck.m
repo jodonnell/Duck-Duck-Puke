@@ -28,9 +28,14 @@
 
     if (self = [CCSprite spriteWithSpriteFrameName:@"daffystanding0.png"])
     {
+        CCAnimation* animUpset = [CCAnimation animationWithFrame:@"daffyupset" frameCount:2 delay:0.08f];
+        animUpset.delay = 0.08;
+        [[CCAnimationCache sharedAnimationCache] addAnimation:animUpset name:@"daffyupset"];
 
         CCAnimation* anim = [CCAnimation animationWithFrame:@"daffystanding" frameCount:2 delay:0.08f];
         anim.delay = 0.08;
+        [[CCAnimationCache sharedAnimationCache] addAnimation:anim name:@"daffystanding"];
+
         CCAnimate* animate = [CCAnimate actionWithAnimation:anim];
         CCRepeatForever* repeat = [CCRepeatForever actionWithAction:animate];
         [self runAction:repeat];
@@ -41,4 +46,8 @@
     return self;
 }
 
+-(void) dealloc
+{
+    [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
+}
 @end
