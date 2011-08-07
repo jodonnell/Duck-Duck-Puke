@@ -26,7 +26,7 @@
     CCSpriteFrameCache* frameCache = [CCSpriteFrameCache sharedSpriteFrameCache];
     [frameCache addSpriteFramesWithFile:@"ducks.plist"];
 
-    if (self = [CCSprite spriteWithSpriteFrameName:@"daffystanding0.png"])
+    if ((self = [CCSprite spriteWithSpriteFrameName:@"daffystanding0.png"]))
     {
         CCAnimation* animUpset = [CCAnimation animationWithFrame:@"daffyupset" frameCount:2 delay:0.08f];
         animUpset.delay = 0.08;
@@ -49,5 +49,6 @@
 -(void) dealloc
 {
     [[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
+    [super dealloc];
 }
 @end
