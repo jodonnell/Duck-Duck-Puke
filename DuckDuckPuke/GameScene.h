@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "Duck.h"
+#import "GADBannerView.h"
+#import "RootViewController.h"
 
 @interface GameScene : CCLayer {
     BOOL isShaking;
     UIAcceleration* lastAcceleration;
     Duck* duck;
+
+    GADBannerView *bannerView;
+    RootViewController *controller;
 }
 @property(retain) UIAcceleration* lastAcceleration;
 

@@ -11,6 +11,9 @@
 		3398689C13EDA1B400C2F7C3 /* ducks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3398689A13EDA1B400C2F7C3 /* ducks.plist */; };
 		3398689D13EDA1B400C2F7C3 /* ducks.png in Resources */ = {isa = PBXBuildFile; fileRef = 3398689B13EDA1B400C2F7C3 /* ducks.png */; };
 		339868A013EDB8E000C2F7C3 /* Duck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3398689F13EDB8E000C2F7C3 /* Duck.m */; };
+		33D27E5013F0F64D00C9AD29 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D27E4F13F0F64D00C9AD29 /* libGoogleAdMobAds.a */; };
+		33D27E5413F0F70F00C9AD29 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D27E5313F0F70F00C9AD29 /* MessageUI.framework */; };
+		33D27E5613F0F71A00C9AD29 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D27E5513F0F71A00C9AD29 /* SystemConfiguration.framework */; };
 		33FF0F8613EBB23E00F421DD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FF0F8513EBB23E00F421DD /* QuartzCore.framework */; };
 		33FF0F8813EBB23E00F421DD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FF0F8713EBB23E00F421DD /* OpenGLES.framework */; };
 		33FF0F8A13EBB23E00F421DD /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FF0F8913EBB23E00F421DD /* OpenAL.framework */; };
@@ -135,6 +138,15 @@
 		3398689B13EDA1B400C2F7C3 /* ducks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ducks.png; sourceTree = "<group>"; };
 		3398689E13EDB8E000C2F7C3 /* Duck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Duck.h; sourceTree = "<group>"; };
 		3398689F13EDB8E000C2F7C3 /* Duck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Duck.m; sourceTree = "<group>"; };
+		33D27E4913F0F64D00C9AD29 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerView.h; path = GoogleAdMobAdsSDK/GADBannerView.h; sourceTree = "<group>"; };
+		33D27E4A13F0F64D00C9AD29 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerViewDelegate.h; path = GoogleAdMobAdsSDK/GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		33D27E4B13F0F64D00C9AD29 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInterstitial.h; path = GoogleAdMobAdsSDK/GADInterstitial.h; sourceTree = "<group>"; };
+		33D27E4C13F0F64D00C9AD29 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADInterstitialDelegate.h; path = GoogleAdMobAdsSDK/GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		33D27E4D13F0F64D00C9AD29 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADRequest.h; path = GoogleAdMobAdsSDK/GADRequest.h; sourceTree = "<group>"; };
+		33D27E4E13F0F64D00C9AD29 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADRequestError.h; path = GoogleAdMobAdsSDK/GADRequestError.h; sourceTree = "<group>"; };
+		33D27E4F13F0F64D00C9AD29 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = GoogleAdMobAdsSDK/libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		33D27E5313F0F70F00C9AD29 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		33D27E5513F0F71A00C9AD29 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		33FF0F8113EBB23E00F421DD /* DuckDuckPuke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuckDuckPuke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FF0F8513EBB23E00F421DD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		33FF0F8713EBB23E00F421DD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -377,6 +389,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D27E5613F0F71A00C9AD29 /* SystemConfiguration.framework in Frameworks */,
+				33D27E5413F0F70F00C9AD29 /* MessageUI.framework in Frameworks */,
 				33FF0F8613EBB23E00F421DD /* QuartzCore.framework in Frameworks */,
 				33FF0F8813EBB23E00F421DD /* OpenGLES.framework in Frameworks */,
 				33FF0F8A13EBB23E00F421DD /* OpenAL.framework in Frameworks */,
@@ -385,15 +399,32 @@
 				33FF0F9013EBB23F00F421DD /* UIKit.framework in Frameworks */,
 				33FF0F9213EBB23F00F421DD /* Foundation.framework in Frameworks */,
 				33FF0F9413EBB23F00F421DD /* CoreGraphics.framework in Frameworks */,
+				33D27E5013F0F64D00C9AD29 /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33D27E5213F0F65600C9AD29 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				33D27E4913F0F64D00C9AD29 /* GADBannerView.h */,
+				33D27E4A13F0F64D00C9AD29 /* GADBannerViewDelegate.h */,
+				33D27E4B13F0F64D00C9AD29 /* GADInterstitial.h */,
+				33D27E4C13F0F64D00C9AD29 /* GADInterstitialDelegate.h */,
+				33D27E4D13F0F64D00C9AD29 /* GADRequest.h */,
+				33D27E4E13F0F64D00C9AD29 /* GADRequestError.h */,
+				33D27E4F13F0F64D00C9AD29 /* libGoogleAdMobAds.a */,
+			);
+			name = Ads;
+			sourceTree = "<group>";
+		};
 		33FF0F7613EBB23E00F421DD = {
 			isa = PBXGroup;
 			children = (
+				33D27E5513F0F71A00C9AD29 /* SystemConfiguration.framework */,
+				33D27E5313F0F70F00C9AD29 /* MessageUI.framework */,
 				33FF0F9513EBB23F00F421DD /* DuckDuckPuke */,
 				33FF0F8413EBB23E00F421DD /* Frameworks */,
 				33FF0F8213EBB23E00F421DD /* Products */,
@@ -426,6 +457,7 @@
 		33FF0F9513EBB23F00F421DD /* DuckDuckPuke */ = {
 			isa = PBXGroup;
 			children = (
+				33D27E5213F0F65600C9AD29 /* Ads */,
 				33FF10E713EBB24100F421DD /* AppDelegate.h */,
 				33FF10E813EBB24100F421DD /* AppDelegate.m */,
 				3398689E13EDB8E000C2F7C3 /* Duck.h */,
@@ -994,6 +1026,10 @@
 				GCC_PREFIX_HEADER = DuckDuckPuke/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = DuckDuckPuke/Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/DuckDuckPuke/GoogleAdMobAdsSDK\"",
+				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1009,6 +1045,10 @@
 				GCC_PREFIX_HEADER = DuckDuckPuke/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = DuckDuckPuke/Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/DuckDuckPuke/GoogleAdMobAdsSDK\"",
+				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;

@@ -18,6 +18,7 @@
 -(void) activateShakeMeLabel:(ccTime) delta;
 -(void) shakeMeStartBlink:(ccTime) delta;
 -(void) shakeMeStopBlink;
+-(void) createAds;
 @end
 
 
@@ -42,9 +43,32 @@
         self.isAccelerometerEnabled = YES;
         [self createDuck];
         [self createShakeMeLabel];
-
+        [self createAds];
     }
     return self;
+}
+
+-(void) createAds
+{
+    CGSize size = [[CCDirector sharedDirector] winSize];
+
+    controller = [[RootViewController alloc]init];
+    controller.view.frame = CGRectMake(0,0,size.width,size.height);
+
+    bannerView = [[GADBannerView alloc]
+                     initWithFrame:CGRectMake(size.width/2-160,
+                                              size.height -
+                                              GAD_SIZE_320x50.height,
+                                              GAD_SIZE_320x50.width,
+                                              GAD_SIZE_320x50.height)];
+
+    bannerView.adUnitID = @"a14e40bb90c10a5";
+    bannerView.rootViewController = controller;
+
+    [bannerView loadRequest:[GADRequest request]];
+
+    [controller.view addSubview:bannerView];
+    [[[CCDirector sharedDirector] openGLView]addSubview : controller.view];
 }
 
 -(void) createShakeMeLabel
@@ -100,6 +124,9 @@
 -(void) dealloc
 {
     CCLOG(@"%@: %@", NSStringFromSelector(_cmd), self);
+    [bannerView release];
+    [controller.view removeFromSuperview];
+    [controller release];
     [super dealloc];
 }
 
