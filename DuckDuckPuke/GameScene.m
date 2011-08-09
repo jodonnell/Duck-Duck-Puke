@@ -15,9 +15,9 @@
 @interface GameScene (PrivateMethods)
 -(void) createShakeMeLabel;
 -(void) createDuck;
--(void) updateShakeMeLabel:(ccTime) delta;
--(void) updateStartBlink:(ccTime) delta;
--(void) updateStopBlink;
+-(void) activateShakeMeLabel:(ccTime) delta;
+-(void) shakeMeStartBlink:(ccTime) delta;
+-(void) shakeMeStopBlink;
 @end
 
 
@@ -55,30 +55,30 @@
     label.tag = kTagShakeMeLabel;
     label.visible = NO;
     [self addChild: label];
-    [self schedule:@selector(updateShakeMeLabel:) interval:10.0f];
+    [self schedule:@selector(activateShakeMeLabel:) interval:10.0f];
 }
 
--(void) updateShakeMeLabel:(ccTime) delta
+-(void) activateShakeMeLabel:(ccTime) delta
 {
     CCLabelTTF *label = (CCLabelTTF*)[self getChildByTag:kTagShakeMeLabel];
     label.visible = YES;
 
-    [self schedule:@selector(updateStartBlink:) interval:0.3f];
+    [self schedule:@selector(shakeMeStartBlink:) interval:0.3f];
 }
 
--(void) updateStartBlink:(ccTime) delta
+-(void) shakeMeStartBlink:(ccTime) delta
 {
     CCLabelTTF *label = (CCLabelTTF*)[self getChildByTag:kTagShakeMeLabel];
     CCBlink *blink = [CCBlink actionWithDuration:2 blinks:2];
 
-    CCCallFunc* actionCallFunc = [CCCallFunc actionWithTarget:self selector:@selector(updateStopBlink)];
+    CCCallFunc* actionCallFunc = [CCCallFunc actionWithTarget:self selector:@selector(shakeMeStopBlink)];
     CCSequence *sequence = [CCSequence actions: blink, actionCallFunc, nil];
 
     [label runAction:sequence];
-    [self unschedule:@selector(updateStartBlink:)];
+    [self unschedule:@selector(shakeMeStartBlink:)];
 }
 
--(void) updateStopBlink
+-(void) shakeMeStopBlink
 {
     CCLabelTTF *label = (CCLabelTTF*)[self getChildByTag:kTagShakeMeLabel];
     label.visible = NO;
