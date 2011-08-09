@@ -10,12 +10,15 @@
 #import "cocos2d.h"
 
 @interface Duck : CCSprite {
-    
+    BOOL isShaking;
 }
+
+@property BOOL isShaking;
 
 +(id) duck;
 -(void) startStandingAnimation;
 -(void) startPukingAnimation;
+-(void) endStandingAnimation;
 
 
 @end

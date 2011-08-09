@@ -13,7 +13,6 @@
     BOOL isShaking;
     UIAcceleration* lastAcceleration;
     Duck* duck;
-    int shakenLevel;
 }
 @property(retain) UIAcceleration* lastAcceleration;
 

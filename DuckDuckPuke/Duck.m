@@ -9,16 +9,19 @@
 #import "Duck.h"
 #import "CCAnimationHelper.h"
 
+#define kTagWalkingAnimation 10
+
 @interface Duck (PrivateMethods)
 -(id) initWithDuckImage;
 @end
 
-
 @implementation Duck
+
+@synthesize isShaking;
 
 +(id) duck
 {
-	return [[[self alloc] initWithDuckImage] autorelease];
+    return [[[self alloc] initWithDuckImage] autorelease];
 }
 
 -(id) initWithDuckImage
@@ -47,14 +50,31 @@
 {
     CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"daffystanding"]];
     CCRepeatForever* repeat = [CCRepeatForever actionWithAction:animate];
+    repeat.tag = kTagWalkingAnimation;
     [self runAction:repeat];
+}
+
+-(void) endStandingAnimation
+{
+    [self stopActionByTag:kTagWalkingAnimation];
+}
+
+-(void) endPukingAnimation
+{
+    if (isShaking)
+        [self startPukingAnimation];
+    else
+        [self startStandingAnimation];
 }
 
 -(void) startPukingAnimation
 {
     CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"daffyupset"]];
-    CCRepeatForever* repeat = [CCRepeatForever actionWithAction:animate];
-    [self runAction:repeat];
+
+    CCCallFunc* actionCallFunc = [CCCallFunc actionWithTarget:self selector:@selector(endPukingAnimation)];
+    CCSequence *sequence = [CCSequence actions: animate, actionCallFunc, nil];
+
+    [self runAction:sequence];
 }
 
 -(void) dealloc

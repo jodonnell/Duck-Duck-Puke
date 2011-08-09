@@ -29,7 +29,6 @@
         CCLOG(@"%@: %@", NSStringFromSelector(_cmd), self);
         
         self.isAccelerometerEnabled = YES;
-//        self.shakenLevel = 0;q`
         [self createDuck];
     }
     return self;
@@ -40,14 +39,13 @@
     duck = [Duck duck];
     [duck startStandingAnimation];
     [self addChild:duck z:0 tag:1];
-    //[self scheduleUpdate];
+    [self scheduleUpdate];
 }
 
-// -(void) update:(ccTime)delta
-// {
-// 	// Shooting is relayed to the game scene
-// 	[[GameScene sharedGameScene] shootBulletFromShip:self];
-// }
+-(void) update:(ccTime)delta
+{
+    duck.isShaking = isShaking;
+}
 
 -(void) dealloc
 {
@@ -67,7 +65,7 @@
 {
     if (!isShaking && [self isShakingCheck:acceleration andThreshold:0.7]) {
         isShaking = YES;
-        
+        [duck endStandingAnimation];
         [duck startPukingAnimation];
     } else if (isShaking && ![self isShakingCheck:acceleration andThreshold:0.2]) {
         isShaking = NO;
