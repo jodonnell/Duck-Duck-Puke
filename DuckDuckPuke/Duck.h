@@ -14,5 +14,8 @@
 }
 
 +(id) duck;
+-(void) startStandingAnimation;
+-(void) startPukingAnimation;
+
 
 @end

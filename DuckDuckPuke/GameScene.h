@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Duck.h"
 
 @interface GameScene : CCLayer {
     BOOL isShaking;
     UIAcceleration* lastAcceleration;
-    CCSprite* player;
+    Duck* duck;
     int shakenLevel;
 }
 @property(retain) UIAcceleration* lastAcceleration;

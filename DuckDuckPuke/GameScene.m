@@ -29,7 +29,7 @@
         CCLOG(@"%@: %@", NSStringFromSelector(_cmd), self);
         
         self.isAccelerometerEnabled = YES;
-//        self.shakenLevel = 0;
+//        self.shakenLevel = 0;q`
         [self createDuck];
     }
     return self;
@@ -37,8 +37,9 @@
 
 -(void) createDuck
 {
-    player = [Duck duck];
-    [self addChild:player z:0 tag:1];
+    duck = [Duck duck];
+    [duck startStandingAnimation];
+    [self addChild:duck z:0 tag:1];
     //[self scheduleUpdate];
 }
 
@@ -66,14 +67,12 @@
 {
     if (!isShaking && [self isShakingCheck:acceleration andThreshold:0.7]) {
         isShaking = YES;
-        [player stopAllActions];
-
-//        CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"daffyupset"]];
-//        CCRepeatForever* repeat = [CCRepeatForever actionWithAction:animate];
-        //[player runAction:repeat];
+        
+        [duck startPukingAnimation];
     } else if (isShaking && ![self isShakingCheck:acceleration andThreshold:0.2]) {
         isShaking = NO;
-        [player setDisplayFrameWithAnimationName:@"daffystanding" index:0];
+
+        [duck startStandingAnimation];
     }
 }
 
