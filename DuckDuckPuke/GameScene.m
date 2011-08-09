@@ -10,6 +10,17 @@
 #import "CCAnimationHelper.h"
 #import "Duck.h"
 
+#define kTagShakeMeLabel 11
+
+@interface GameScene (PrivateMethods)
+-(void) createShakeMeLabel;
+-(void) createDuck;
+-(void) updateShakeMeLabel:(ccTime) delta;
+-(void) updateStartBlink:(ccTime) delta;
+-(void) updateStopBlink;
+@end
+
+
 @implementation GameScene
 
 @synthesize lastAcceleration;
@@ -30,8 +41,47 @@
         
         self.isAccelerometerEnabled = YES;
         [self createDuck];
+        [self createShakeMeLabel];
+
     }
     return self;
+}
+
+-(void) createShakeMeLabel
+{
+    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Shake Me!" fontName:@"Marker Felt" fontSize:40];
+    CGSize size = [[CCDirector sharedDirector] winSize];
+    label.position = CGPointMake(size.width / 2, size.height * 0.9);
+    label.tag = kTagShakeMeLabel;
+    label.visible = NO;
+    [self addChild: label];
+    [self schedule:@selector(updateShakeMeLabel:) interval:10.0f];
+}
+
+-(void) updateShakeMeLabel:(ccTime) delta
+{
+    CCLabelTTF *label = (CCLabelTTF*)[self getChildByTag:kTagShakeMeLabel];
+    label.visible = YES;
+
+    [self schedule:@selector(updateStartBlink:) interval:0.3f];
+}
+
+-(void) updateStartBlink:(ccTime) delta
+{
+    CCLabelTTF *label = (CCLabelTTF*)[self getChildByTag:kTagShakeMeLabel];
+    CCBlink *blink = [CCBlink actionWithDuration:2 blinks:2];
+
+    CCCallFunc* actionCallFunc = [CCCallFunc actionWithTarget:self selector:@selector(updateStopBlink)];
+    CCSequence *sequence = [CCSequence actions: blink, actionCallFunc, nil];
+
+    [label runAction:sequence];
+    [self unschedule:@selector(updateStartBlink:)];
+}
+
+-(void) updateStopBlink
+{
+    CCLabelTTF *label = (CCLabelTTF*)[self getChildByTag:kTagShakeMeLabel];
+    label.visible = NO;
 }
 
 -(void) createDuck

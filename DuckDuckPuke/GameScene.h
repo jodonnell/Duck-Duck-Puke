@@ -18,7 +18,6 @@
 
 +(id) scene;
 
--(void) createDuck;
 -(void) checkForShaking:(UIAcceleration *)acceleration;
 -(BOOL) isShakingCheck:(UIAcceleration *)current andThreshold:(double)threshold;
 
