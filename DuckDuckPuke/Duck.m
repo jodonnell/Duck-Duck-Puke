@@ -27,15 +27,15 @@
 -(id) initWithDuckImage
 {
     CCSpriteFrameCache* frameCache = [CCSpriteFrameCache sharedSpriteFrameCache];
-    [frameCache addSpriteFramesWithFile:@"ducks.plist"];
+    [frameCache addSpriteFramesWithFile:@"duckpuke.plist"];
 
-    if ((self = [super initWithSpriteFrameName:@"daffystanding0.png"]))
+    if ((self = [super initWithSpriteFrameName:@"duckpuke0.png"]))
     {
-        CCAnimation* animUpset = [CCAnimation animationWithFrame:@"daffyupset" frameCount:2 delay:0.08f];
+        CCAnimation* animUpset = [CCAnimation animationWithFrame:@"duckpuke" frameCount:19 delay:0.08f];
         animUpset.delay = 0.08;
         [[CCAnimationCache sharedAnimationCache] addAnimation:animUpset name:@"daffyupset"];
 
-        CCAnimation* anim = [CCAnimation animationWithFrame:@"daffystanding" frameCount:2 delay:0.08f];
+        CCAnimation* anim = [CCAnimation animationWithFrame:@"duckpuke" frameCount:2 delay:0.08f];
         anim.delay = 0.08;
         [[CCAnimationCache sharedAnimationCache] addAnimation:anim name:@"daffystanding"];
 

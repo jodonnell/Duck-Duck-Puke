@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332ABA2913F6CD3A008BD144 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FF0F8F13EBB23E00F421DD /* UIKit.framework */; };
+		332ABA2A13F6CD3A008BD144 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FF0F9113EBB23F00F421DD /* Foundation.framework */; };
+		332ABA2B13F6CD3A008BD144 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FF0F9313EBB23F00F421DD /* CoreGraphics.framework */; };
+		332ABA3113F6CD3A008BD144 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 332ABA2F13F6CD3A008BD144 /* InfoPlist.strings */; };
+		332ABA3313F6CD3A008BD144 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 332ABA3213F6CD3A008BD144 /* main.m */; };
+		332ABA4B13F6CD79008BD144 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332ABA4A13F6CD79008BD144 /* GHUnitIOS.framework */; };
+		332ABA4E13F6CF74008BD144 /* DuckDuckPukeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 332ABA4D13F6CF74008BD144 /* DuckDuckPukeTests.m */; };
+		332ABA5913F6EB3E008BD144 /* duckpuke.plist in Resources */ = {isa = PBXBuildFile; fileRef = 332ABA5713F6EB3E008BD144 /* duckpuke.plist */; };
+		332ABA5A13F6EB3E008BD144 /* duckpuke.png in Resources */ = {isa = PBXBuildFile; fileRef = 332ABA5813F6EB3E008BD144 /* duckpuke.png */; };
 		3398689013ECDD7E00C2F7C3 /* CCAnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3398688F13ECDD7E00C2F7C3 /* CCAnimationHelper.m */; };
-		3398689C13EDA1B400C2F7C3 /* ducks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3398689A13EDA1B400C2F7C3 /* ducks.plist */; };
-		3398689D13EDA1B400C2F7C3 /* ducks.png in Resources */ = {isa = PBXBuildFile; fileRef = 3398689B13EDA1B400C2F7C3 /* ducks.png */; };
 		339868A013EDB8E000C2F7C3 /* Duck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3398689F13EDB8E000C2F7C3 /* Duck.m */; };
 		33D27E5013F0F64D00C9AD29 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D27E4F13F0F64D00C9AD29 /* libGoogleAdMobAds.a */; };
 		33D27E5413F0F70F00C9AD29 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D27E5313F0F70F00C9AD29 /* MessageUI.framework */; };
@@ -132,10 +139,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		332ABA2713F6CD3A008BD144 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		332ABA2E13F6CD3A008BD144 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		332ABA3013F6CD3A008BD144 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		332ABA3213F6CD3A008BD144 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		332ABA3413F6CD3A008BD144 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		332ABA4A13F6CD79008BD144 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = ../GHUnitIOS.framework; sourceTree = "<group>"; };
+		332ABA4D13F6CF74008BD144 /* DuckDuckPukeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuckDuckPukeTests.m; sourceTree = "<group>"; };
+		332ABA5713F6EB3E008BD144 /* duckpuke.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = duckpuke.plist; path = Resources/ducky/duckpuke.plist; sourceTree = "<group>"; };
+		332ABA5813F6EB3E008BD144 /* duckpuke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = duckpuke.png; path = Resources/ducky/duckpuke.png; sourceTree = "<group>"; };
 		3398688E13ECDD7E00C2F7C3 /* CCAnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAnimationHelper.h; sourceTree = "<group>"; };
 		3398688F13ECDD7E00C2F7C3 /* CCAnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAnimationHelper.m; sourceTree = "<group>"; };
-		3398689A13EDA1B400C2F7C3 /* ducks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ducks.plist; sourceTree = "<group>"; };
-		3398689B13EDA1B400C2F7C3 /* ducks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ducks.png; sourceTree = "<group>"; };
 		3398689E13EDB8E000C2F7C3 /* Duck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Duck.h; sourceTree = "<group>"; };
 		3398689F13EDB8E000C2F7C3 /* Duck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Duck.m; sourceTree = "<group>"; };
 		33D27E4913F0F64D00C9AD29 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerView.h; path = GoogleAdMobAdsSDK/GADBannerView.h; sourceTree = "<group>"; };
@@ -385,6 +399,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		332ABA2413F6CD3A008BD144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				332ABA2913F6CD3A008BD144 /* UIKit.framework in Frameworks */,
+				332ABA2A13F6CD3A008BD144 /* Foundation.framework in Frameworks */,
+				332ABA2B13F6CD3A008BD144 /* CoreGraphics.framework in Frameworks */,
+				332ABA4B13F6CD79008BD144 /* GHUnitIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33FF0F7E13EBB23E00F421DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +431,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		332ABA2C13F6CD3A008BD144 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				332ABA2D13F6CD3A008BD144 /* Supporting Files */,
+				332ABA4D13F6CF74008BD144 /* DuckDuckPukeTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		332ABA2D13F6CD3A008BD144 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				332ABA2E13F6CD3A008BD144 /* Tests-Info.plist */,
+				332ABA2F13F6CD3A008BD144 /* InfoPlist.strings */,
+				332ABA3213F6CD3A008BD144 /* main.m */,
+				332ABA3413F6CD3A008BD144 /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		33D27E5213F0F65600C9AD29 /* Ads */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +471,7 @@
 				33D27E5513F0F71A00C9AD29 /* SystemConfiguration.framework */,
 				33D27E5313F0F70F00C9AD29 /* MessageUI.framework */,
 				33FF0F9513EBB23F00F421DD /* DuckDuckPuke */,
+				332ABA2C13F6CD3A008BD144 /* Tests */,
 				33FF0F8413EBB23E00F421DD /* Frameworks */,
 				33FF0F8213EBB23E00F421DD /* Products */,
 			);
@@ -435,6 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				33FF0F8113EBB23E00F421DD /* DuckDuckPuke.app */,
+				332ABA2713F6CD3A008BD144 /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -442,6 +489,7 @@
 		33FF0F8413EBB23E00F421DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				332ABA4A13F6CD79008BD144 /* GHUnitIOS.framework */,
 				33FF0F8513EBB23E00F421DD /* QuartzCore.framework */,
 				33FF0F8713EBB23E00F421DD /* OpenGLES.framework */,
 				33FF0F8913EBB23E00F421DD /* OpenAL.framework */,
@@ -479,8 +527,8 @@
 		33FF0F9613EBB23F00F421DD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3398689A13EDA1B400C2F7C3 /* ducks.plist */,
-				3398689B13EDA1B400C2F7C3 /* ducks.png */,
+				332ABA5713F6EB3E008BD144 /* duckpuke.plist */,
+				332ABA5813F6EB3E008BD144 /* duckpuke.png */,
 				33FF0F9713EBB23F00F421DD /* Default.png */,
 				33FF0F9913EBB23F00F421DD /* fps_images.png */,
 				33FF0F9B13EBB23F00F421DD /* Icon-72.png */,
@@ -809,6 +857,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		332ABA2613F6CD3A008BD144 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 332ABA4813F6CD3A008BD144 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				332ABA2313F6CD3A008BD144 /* Sources */,
+				332ABA2413F6CD3A008BD144 /* Frameworks */,
+				332ABA2513F6CD3A008BD144 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 332ABA2713F6CD3A008BD144 /* Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
 		33FF0F8013EBB23E00F421DD /* DuckDuckPuke */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33FF10F313EBB24100F421DD /* Build configuration list for PBXNativeTarget "DuckDuckPuke" */;
@@ -844,11 +909,20 @@
 			projectRoot = "";
 			targets = (
 				33FF0F8013EBB23E00F421DD /* DuckDuckPuke */,
+				332ABA2613F6CD3A008BD144 /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		332ABA2513F6CD3A008BD144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				332ABA3113F6CD3A008BD144 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33FF0F7F13EBB23E00F421DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -862,14 +936,23 @@
 				33FF0FA413EBB23F00F421DD /* Icon.png in Resources */,
 				33FF0FA613EBB23F00F421DD /* Icon@2x.png in Resources */,
 				33FF0FA913EBB23F00F421DD /* iTunesArtwork in Resources */,
-				3398689C13EDA1B400C2F7C3 /* ducks.plist in Resources */,
-				3398689D13EDA1B400C2F7C3 /* ducks.png in Resources */,
+				332ABA5913F6EB3E008BD144 /* duckpuke.plist in Resources */,
+				332ABA5A13F6EB3E008BD144 /* duckpuke.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		332ABA2313F6CD3A008BD144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				332ABA3313F6CD3A008BD144 /* main.m in Sources */,
+				332ABA4E13F6CF74008BD144 /* DuckDuckPukeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33FF0F7D13EBB23E00F421DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -979,7 +1062,68 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		332ABA2F13F6CD3A008BD144 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				332ABA3013F6CD3A008BD144 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		332ABA4613F6CD3A008BD144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		332ABA4713F6CD3A008BD144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		33FF10F113EBB24100F421DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1059,6 +1203,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		332ABA4813F6CD3A008BD144 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				332ABA4613F6CD3A008BD144 /* Debug */,
+				332ABA4713F6CD3A008BD144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		33FF0F7B13EBB23E00F421DD /* Build configuration list for PBXProject "DuckDuckPuke" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

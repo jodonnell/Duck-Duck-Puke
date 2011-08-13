@@ -1,0 +1,5 @@
+
+* DuckDuckPuke
+** Add ads
+** Meter?
+** DONE Shake Me!

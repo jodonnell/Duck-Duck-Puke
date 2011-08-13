@@ -146,8 +146,6 @@
         [duck startPukingAnimation];
     } else if (isShaking && ![self isShakingCheck:acceleration andThreshold:0.2]) {
         isShaking = NO;
-
-        [duck startStandingAnimation];
     }
 }
 
