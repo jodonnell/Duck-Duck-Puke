@@ -11,9 +11,11 @@
 
 @interface Duck : CCSprite {
     BOOL isShaking;
+    BOOL isPuking;
 }
 
 @property BOOL isShaking;
+@property BOOL isPuking;
 
 +(id) duck;
 -(void) startStandingAnimation;

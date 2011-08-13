@@ -140,7 +140,7 @@
 
 -(void) checkForShaking:(UIAcceleration *)acceleration
 {
-    if (!isShaking && [self isShakingCheck:acceleration andThreshold:0.7]) {
+    if (!isShaking && ![duck isPuking] && [self isShakingCheck:acceleration andThreshold:0.7]) {
         isShaking = YES;
         [duck endStandingAnimation];
         [duck startPukingAnimation];

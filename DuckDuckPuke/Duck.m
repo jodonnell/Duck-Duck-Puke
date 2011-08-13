@@ -18,6 +18,7 @@
 @implementation Duck
 
 @synthesize isShaking;
+@synthesize isPuking;
 
 +(id) duck
 {
@@ -35,7 +36,7 @@
         animUpset.delay = 0.08;
         [[CCAnimationCache sharedAnimationCache] addAnimation:animUpset name:@"daffyupset"];
 
-        CCAnimation* anim = [CCAnimation animationWithFrame:@"duckpuke" frameCount:2 delay:0.08f];
+        CCAnimation* anim = [CCAnimation animationWithFrame:@"duckpuke" frameCount:1 delay:0.08f];
         anim.delay = 0.08;
         [[CCAnimationCache sharedAnimationCache] addAnimation:anim name:@"daffystanding"];
 
@@ -61,6 +62,7 @@
 
 -(void) endPukingAnimation
 {
+    isPuking = NO;
     if (isShaking)
         [self startPukingAnimation];
     else
@@ -69,6 +71,7 @@
 
 -(void) startPukingAnimation
 {
+    isPuking = YES;
     CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"daffyupset"]];
 
     CCCallFunc* actionCallFunc = [CCCallFunc actionWithTarget:self selector:@selector(endPukingAnimation)];
