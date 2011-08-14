@@ -119,6 +119,9 @@
 -(void) update:(ccTime)delta
 {
     duck.isShaking = isShaking;
+
+    [duck randomBlink];
+    [duck randomQuack];
 }
 
 -(void) dealloc
@@ -142,7 +145,7 @@
 {
     if (!isShaking && ![duck isPuking] && [self isShakingCheck:acceleration andThreshold:0.7]) {
         isShaking = YES;
-        [duck endStandingAnimation];
+        [duck endAnyAnimations];
         [duck startPukingAnimation];
     } else if (isShaking && ![self isShakingCheck:acceleration andThreshold:0.2]) {
         isShaking = NO;

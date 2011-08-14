@@ -12,15 +12,29 @@
 @interface Duck : CCSprite {
     BOOL isShaking;
     BOOL isPuking;
+    BOOL isStanding;
 }
 
 @property BOOL isShaking;
 @property BOOL isPuking;
 
 +(id) duck;
--(void) startStandingAnimation;
+
 -(void) startPukingAnimation;
+-(void) endPukingAnimation;
+
+-(void) startStandingAnimation;
 -(void) endStandingAnimation;
 
+-(void) startBlinkingAnimation;
+-(void) endBlinkingAnimation;
+
+-(void) startQuackingAnimation;
+-(void) endQuackingAnimation;
+
+-(void) endAnyAnimations;
+
+-(void) randomBlink;
+-(void) randomQuack;
 
 @end
