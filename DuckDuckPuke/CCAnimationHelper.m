@@ -11,7 +11,7 @@
 @implementation CCAnimation (Helper)
 
 // Creates an animation from single files.
-+(CCAnimation*) animationWithFile:(NSString*)name frameCount:(int)frameCount delay:(float)delay
++(CCAnimation*) animationWithFile:(NSString*)name frameCount:(int)frameCount
 {
 	// load the animation frames as textures and create the sprite frames
 	NSMutableArray* frames = [NSMutableArray arrayWithCapacity:frameCount];
@@ -33,21 +33,41 @@
 	return [CCAnimation animationWithFrames:frames];
 }
 
-// Creates an animation from sprite frames.
-+(CCAnimation*) animationWithFrame:(NSString*)frame frameCount:(int)frameCount delay:(float)delay
++(CCAnimation*) animationWithFrame:(NSString*)frame frameCount:(int)frameCount
 {
-	// load the ship's animation frames as textures and create a sprite frame
 	NSMutableArray* frames = [NSMutableArray arrayWithCapacity:frameCount];
+        CCSpriteFrameCache* frameCache = [CCSpriteFrameCache sharedSpriteFrameCache];
 	for (int i = 0; i < frameCount; i++)
 	{
 		NSString* file = [NSString stringWithFormat:@"%@%i.png", frame, i];
-		CCSpriteFrameCache* frameCache = [CCSpriteFrameCache sharedSpriteFrameCache];
 		CCSpriteFrame* frame = [frameCache spriteFrameByName:file];
 		[frames addObject:frame];
 	}
 	
-	// return an animation object from all the sprite animation frames
 	return [CCAnimation animationWithFrames:frames];
 }
+
++(CCAnimation*) animationWithFrameNames:(NSArray*)frameNames
+{
+    int frameCount = [frameNames count];
+    NSMutableArray* frames = [NSMutableArray arrayWithCapacity:frameCount];
+    CCSpriteFrameCache* frameCache = [CCSpriteFrameCache sharedSpriteFrameCache];
+    for (int i = 0; i < frameCount; i++)
+    {
+        NSString* file = [frameNames objectAtIndex:i];
+        CCSpriteFrame* frame = [frameCache spriteFrameByName:file];
+        [frames addObject:frame];
+    }
+	
+    return [CCAnimation animationWithFrames:frames];
+}
+
++(void) createAnimationWithFileNames:(NSArray*)fileNames andAnimationName:(NSString*)animationName
+{
+    CCAnimation* anim = [CCAnimation animationWithFrameNames:fileNames];
+    anim.delay = 0.08;
+    [[CCAnimationCache sharedAnimationCache] addAnimation:anim name:animationName];
+}
+
 
 @end

@@ -28,17 +28,13 @@
 -(id) initWithDuckImage
 {
     CCSpriteFrameCache* frameCache = [CCSpriteFrameCache sharedSpriteFrameCache];
-    [frameCache addSpriteFramesWithFile:@"duckpuke.plist"];
+    [frameCache addSpriteFramesWithFile:@"duck.plist"];
 
-    if ((self = [super initWithSpriteFrameName:@"duckpuke0.png"]))
+    if ((self = [super initWithSpriteFrameName:@"duck-standing.png"]))
     {
-        CCAnimation* animUpset = [CCAnimation animationWithFrame:@"duckpuke" frameCount:19 delay:0.08f];
-        animUpset.delay = 0.08;
-        [[CCAnimationCache sharedAnimationCache] addAnimation:animUpset name:@"daffyupset"];
+        [CCAnimation createAnimationWithFileNames: [NSArray arrayWithObjects:@"duck-puke-1.png", @"duck-puke-2.png", @"duck-puke-3.png", @"duck-puke-4.png", @"duck-puke-5.png", @"duck-puke-6.png", @"duck-puke-7.png", @"duck-puke-8.png", @"duck-puke-9.png", @"duck-puke-10.png", @"duck-puke-11.png", @"duck-puke-12.png", @"duck-puke-13.png", @"duck-puke-14.png", @"duck-puke-15.png", @"duck-puke-16.png", @"duck-puke-17.png", @"duck-puke-18.png", nil] andAnimationName:@"puking"];
 
-        CCAnimation* anim = [CCAnimation animationWithFrame:@"duckpuke" frameCount:1 delay:0.08f];
-        anim.delay = 0.08;
-        [[CCAnimationCache sharedAnimationCache] addAnimation:anim name:@"daffystanding"];
+        [CCAnimation createAnimationWithFileNames: [NSArray arrayWithObjects:@"duck-standing.png", nil] andAnimationName:@"standing"];
 
         CGSize screensize = [[CCDirector sharedDirector] winSize];
         self.position = CGPointMake(screensize.width / 2, screensize.height / 2);
@@ -49,7 +45,7 @@
 
 -(void) startStandingAnimation
 {
-    CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"daffystanding"]];
+    CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"standing"]];
     CCRepeatForever* repeat = [CCRepeatForever actionWithAction:animate];
     repeat.tag = kTagWalkingAnimation;
     [self runAction:repeat];
@@ -72,7 +68,7 @@
 -(void) startPukingAnimation
 {
     isPuking = YES;
-    CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"daffyupset"]];
+    CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"puking"]];
 
     CCCallFunc* actionCallFunc = [CCCallFunc actionWithTarget:self selector:@selector(endPukingAnimation)];
     CCSequence *sequence = [CCSequence actions: animate, actionCallFunc, nil];
