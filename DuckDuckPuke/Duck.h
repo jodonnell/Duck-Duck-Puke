@@ -21,6 +21,7 @@
 +(id) duck;
 
 -(void) startPukingAnimation;
+-(void) continuePukingAnimation;
 -(void) endPukingAnimation;
 
 -(void) startStandingAnimation;

@@ -135,11 +135,25 @@
 
 -(void) endPukingAnimation
 {
-    isPuking = NO;
-    if (isShaking)
-        [self startPukingAnimation];
+    if (isShaking) 
+    {
+        [self continuePukingAnimation];
+    }
     else
+    {
+        isPuking = NO;
         [self startStandingAnimation];
+    }
+}
+
+-(void) continuePukingAnimation
+{
+    CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"pukeLoop"]];
+
+    CCCallFunc* actionCallFunc = [CCCallFunc actionWithTarget:self selector:@selector(endPukingAnimation)];
+    CCSequence *sequence = [CCSequence actions: animate, actionCallFunc, nil];
+
+    [self runAction:sequence];
 }
 
 -(void) startPukingAnimation
