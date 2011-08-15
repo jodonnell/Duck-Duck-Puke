@@ -1,5 +1,12 @@
 
 * DuckDuckPuke
-** Add ads
-** Meter?
+** DONE Add ads
 ** DONE Shake Me!
+** TODO add sound
+** TODO add icon
+** TODO add load screen
+** TODO random flicker?
+
+* Ideas
+** Meter?
+** Screen fills with puke?
