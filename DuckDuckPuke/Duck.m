@@ -50,7 +50,7 @@
         [CCAnimation createAnimationWithFileNames: [NSArray arrayWithObjects:@"duck-puke-15.png", @"duck-puke-16.png", @"duck-puke-17.png", @"duck-puke-18.png", nil] andAnimationName:@"pukeLoop"];
 
         CGSize screensize = [[CCDirector sharedDirector] winSize];
-        self.position = CGPointMake(screensize.width / 2, screensize.height / 2);
+        self.position = CGPointMake(screensize.width / 2, screensize.height / 4.35);
     }
 
     return self;

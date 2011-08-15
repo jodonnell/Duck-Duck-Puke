@@ -56,9 +56,7 @@
     controller.view.frame = CGRectMake(0,0,size.width,size.height);
 
     bannerView = [[GADBannerView alloc]
-                     initWithFrame:CGRectMake(size.width/2-160,
-                                              size.height -
-                                              GAD_SIZE_320x50.height,
+                     initWithFrame:CGRectMake(size.width/2-160, 0,
                                               GAD_SIZE_320x50.width,
                                               GAD_SIZE_320x50.height)];
 
@@ -75,7 +73,7 @@
 {
     CCLabelTTF *label = [CCLabelTTF labelWithString:@"Shake Me!" fontName:@"Marker Felt" fontSize:40];
     CGSize size = [[CCDirector sharedDirector] winSize];
-    label.position = CGPointMake(size.width / 2, size.height * 0.9);
+    label.position = CGPointMake(size.width / 2, size.height * 0.77);
     label.tag = kTagShakeMeLabel;
     label.visible = NO;
     [self addChild: label];
