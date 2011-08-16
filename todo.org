@@ -10,3 +10,4 @@
 * Ideas
 ** Meter?
 ** Screen fills with puke?
+** Make the puke continue after you are done shaking for a while?

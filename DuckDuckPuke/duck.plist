@@ -7,301 +7,301 @@
             <key>duck-blink-1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{110,210}}</string>
+                <string>{{25,25},{114,214}}</string>
                 <key>offset</key>
                 <string>{-34,38}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{186,57},{110,210}}</string>
+                <string>{{186,57},{114,214}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-blink-2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{110,0},{110,210}}</string>
+                <string>{{150,25},{114,214}}</string>
                 <key>offset</key>
                 <string>{-34,38}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{186,57},{110,210}}</string>
+                <string>{{186,57},{114,214}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{220,0},{116,210}}</string>
+                <string>{{275,25},{120,214}}</string>
                 <key>offset</key>
                 <string>{-31,38}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{186,57},{116,210}}</string>
+                <string>{{186,57},{120,214}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-10.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{336,0},{192,188}}</string>
+                <string>{{406,25},{196,192}}</string>
                 <key>offset</key>
                 <string>{2,22}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{181,84},{192,188}}</string>
+                <string>{{181,84},{196,192}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-11.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{528,0},{226,184}}</string>
+                <string>{{613,25},{230,188}}</string>
                 <key>offset</key>
                 <string>{-6,20}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{156,88},{226,184}}</string>
+                <string>{{156,88},{230,188}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-12.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{754,0},{222,196}}</string>
+                <string>{{854,25},{226,200}}</string>
                 <key>offset</key>
                 <string>{2,24}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{166,78},{222,196}}</string>
+                <string>{{166,78},{226,200}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-13.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,210},{212,204}}</string>
+                <string>{{1091,25},{216,208}}</string>
                 <key>offset</key>
                 <string>{9,28}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{178,70},{212,204}}</string>
+                <string>{{178,70},{216,208}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-14.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{212,210},{220,200}}</string>
+                <string>{{1318,25},{224,204}}</string>
                 <key>offset</key>
                 <string>{2,26}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{167,74},{220,200}}</string>
+                <string>{{167,74},{224,204}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-15.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{432,210},{218,196}}</string>
+                <string>{{1553,25},{222,200}}</string>
                 <key>offset</key>
                 <string>{2,24}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{168,78},{218,196}}</string>
+                <string>{{168,78},{222,200}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-16.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{650,210},{224,198}}</string>
+                <string>{{1786,25},{228,202}}</string>
                 <key>offset</key>
                 <string>{2,25}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{165,76},{224,198}}</string>
+                <string>{{165,76},{228,202}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-17.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,414},{220,200}}</string>
+                <string>{{25,250},{224,204}}</string>
                 <key>offset</key>
                 <string>{-1,26}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{164,74},{220,200}}</string>
+                <string>{{164,74},{224,204}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-18.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{220,414},{218,198}}</string>
+                <string>{{260,250},{222,202}}</string>
                 <key>offset</key>
                 <string>{0,25}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{166,76},{218,198}}</string>
+                <string>{{166,76},{222,202}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{438,414},{114,218}}</string>
+                <string>{{493,250},{118,222}}</string>
                 <key>offset</key>
                 <string>{-32,42}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{186,49},{114,218}}</string>
+                <string>{{186,49},{118,222}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{552,414},{106,220}}</string>
+                <string>{{622,250},{110,224}}</string>
                 <key>offset</key>
                 <string>{-35,43}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{187,47},{106,220}}</string>
+                <string>{{187,47},{110,224}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{658,414},{100,218}}</string>
+                <string>{{743,250},{104,222}}</string>
                 <key>offset</key>
                 <string>{-39,42}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{186,49},{100,218}}</string>
+                <string>{{186,49},{104,222}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{758,414},{100,218}}</string>
+                <string>{{858,250},{104,222}}</string>
                 <key>offset</key>
                 <string>{-39,42}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{186,49},{100,218}}</string>
+                <string>{{186,49},{104,222}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{858,414},{112,220}}</string>
+                <string>{{973,250},{116,224}}</string>
                 <key>offset</key>
                 <string>{-33,43}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{186,47},{112,220}}</string>
+                <string>{{186,47},{116,224}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-7.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,634},{130,224}}</string>
+                <string>{{1100,250},{134,228}}</string>
                 <key>offset</key>
                 <string>{-23,45}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{187,43},{130,224}}</string>
+                <string>{{187,43},{134,228}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-8.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{130,634},{136,228}}</string>
+                <string>{{1245,250},{140,232}}</string>
                 <key>offset</key>
                 <string>{-21,47}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{186,39},{136,228}}</string>
+                <string>{{186,39},{140,232}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-puke-9.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{266,634},{184,188}}</string>
+                <string>{{1396,250},{188,192}}</string>
                 <key>offset</key>
                 <string>{4,28}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{187,78},{184,188}}</string>
+                <string>{{187,78},{188,192}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-quack-1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{450,634},{114,210}}</string>
+                <string>{{1595,250},{118,214}}</string>
                 <key>offset</key>
                 <string>{-32,38}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{186,57},{114,210}}</string>
+                <string>{{186,57},{118,214}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-quack-2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{564,634},{114,210}}</string>
+                <string>{{1724,250},{118,214}}</string>
                 <key>offset</key>
                 <string>{-32,38}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{186,57},{114,210}}</string>
+                <string>{{186,57},{118,214}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
             <key>duck-standing.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{678,634},{110,210}}</string>
+                <string>{{1853,250},{114,214}}</string>
                 <key>offset</key>
                 <string>{-34,38}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{186,57},{110,210}}</string>
+                <string>{{186,57},{114,214}}</string>
                 <key>sourceSize</key>
-                <string>{550,400}</string>
+                <string>{554,404}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -311,9 +311,9 @@
             <key>realTextureFileName</key>
             <string>duck.png</string>
             <key>size</key>
-            <string>{1024,1024}</string>
+            <string>{2048,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:d9f56e75d0295fb98bde92050ce7c25e$</string>
+            <string>$TexturePacker:SmartUpdate:2b5bdefe9435e7d298389fa911a1fb30$</string>
             <key>textureFileName</key>
             <string>duck.png</string>
         </dict>
