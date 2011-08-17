@@ -14,7 +14,7 @@
 #define kTagQuackingAnimation 12
 
 #define kBlinkInterval 220
-#define kQuackInterval 4
+#define kQuackInterval 440
 
 @interface Duck (PrivateMethods)
 -(id) initWithDuckImage;
