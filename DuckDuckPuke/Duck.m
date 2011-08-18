@@ -12,12 +12,14 @@
 #define kTagWalkingAnimation 10
 #define kTagBlinkingAnimation 11
 #define kTagQuackingAnimation 12
+#define kTagPukingAnimation 13
 
 #define kBlinkInterval 220
 #define kQuackInterval 440
 
 @interface Duck (PrivateMethods)
 -(id) initWithDuckImage;
+-(void) animate:(NSString *)animationName andCallFunc:(SEL) func andTag:(int) tag;
 @end
 
 @implementation Duck
@@ -83,7 +85,6 @@
 -(void) startStandingAnimation
 {
     isStanding = YES;
-
     CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"standing"]];
     CCRepeatForever* repeat = [CCRepeatForever actionWithAction:animate];
     repeat.tag = kTagWalkingAnimation;
@@ -92,22 +93,12 @@
 
 -(void) startBlinkingAnimation
 {
-    CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"blinking"]];
-    CCCallFunc* startStandingFunc = [CCCallFunc actionWithTarget:self selector:@selector(startStandingAnimation)];
-    CCSequence *sequence = [CCSequence actions: animate, startStandingFunc, nil];
-    sequence.tag = kTagBlinkingAnimation;
-
-    [self runAction:sequence];
+    [self animate:@"blinking" andCallFunc:@selector(startStandingAnimation) andTag:kTagBlinkingAnimation];
 }
 
 -(void) startQuackingAnimation
 {
-    CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"quacking"]];
-    CCCallFunc* startStandingFunc = [CCCallFunc actionWithTarget:self selector:@selector(startStandingAnimation)];
-    CCSequence *sequence = [CCSequence actions: animate, startStandingFunc, nil];
-    sequence.tag = kTagQuackingAnimation;
-
-    [self runAction:sequence];
+    [self animate:@"quacking" andCallFunc:@selector(startStandingAnimation) andTag:kTagQuackingAnimation];
 }
 
 -(void) endStandingAnimation
@@ -159,10 +150,16 @@
 -(void) startPukingAnimation
 {
     isPuking = YES;
-    CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"puking"]];
+    [self animate:@"puking" andCallFunc:@selector(endPukingAnimation) andTag:kTagPukingAnimation];
+}
 
-    CCCallFunc* actionCallFunc = [CCCallFunc actionWithTarget:self selector:@selector(endPukingAnimation)];
+-(void) animate:(NSString *)animationName andCallFunc:(SEL) func andTag:(int) tag
+{
+    CCAnimate* animate = [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:animationName]];
+
+    CCCallFunc* actionCallFunc = [CCCallFunc actionWithTarget:self selector:func];
     CCSequence *sequence = [CCSequence actions: animate, actionCallFunc, nil];
+    sequence.tag = tag;
 
     [self runAction:sequence];
 }
