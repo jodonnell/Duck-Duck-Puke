@@ -5,9 +5,14 @@
 ** TODO add sound
 ** TODO add icon
 ** TODO add load screen
-** TODO random flicker?
+** DONE random flicker?
+
+
 
 * Ideas
 ** Meter?
 ** Screen fills with puke?
 ** Make the puke continue after you are done shaking for a while?
+** Keep score for shaking length
+** When shaking move duck, up and down
+** Possibly make pupils big, maybe head bob
